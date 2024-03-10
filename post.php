@@ -6,13 +6,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-        <link href="the-road-ahead-style.css" rel="stylesheet">
+        <link href="styles/the-road-ahead-style.css" rel="stylesheet">
     </head>
     <body>
         <div class="main-wrapper">
             <header class="header">
                 <div class="navigation-menu">
-                    <div class="navigation-main-left"><img src="the-road-ahead-img/Logo-Top.svg"></div>
+                    <div class="navigation-main-left"><img src="/images/Logo-Top-post.svg"></div>
                     <nav class="navigation-main-list">
                         <a href="#" class="navigation-list-element">Home</a>
                         <a href="#" class="navigation-list-element">Categories</a>
@@ -26,7 +26,7 @@
                     <span class="header-main-bot-text">The road ahead might be paved - it might not be.</span>
                 </div>
             </header>
-            <img class="image-after-menu" src="the-road-ahead-img/image-top.png">
+            <img class="image-after-menu" src="/images/image-top.png">
             <div class="main-text-wrapper">
                 <div class="main-text">
                     <p>
@@ -46,7 +46,7 @@
             <footer class="footer">
                 <div class="footer-menu-area">
                     <div class="navigation-menu">
-                        <div class="footer-navigation-main-left"><img src="the-road-ahead-img/Logo-Bot.svg"></div>
+                        <div class="footer-navigation-main-left"><img src="/images/Logo-Bot-post.svg"></div>
                         <nav class="navigation-main-list">
                             <a href="#" class="footer-navigation-list-element">Home</a>
                             <a href="#" class="footer-navigation-list-element">Categories</a>
