@@ -1,57 +1,7 @@
 <?php
-$posts = [
-[
-    'background_path' => '/images/still-standing-tall-img.jpg',
-    'title' => 'Still Standing Tall',
-    'subtitle' => 'Life begins at the end of your comfort zone.',
-    'author_photo_path' => '/images/william-wong-img.jpg',
-    'author_info' => 'William Wong',
-    'post_date' => '9/25/2015'
-],
-[
-    'background_path' => '/images/sunny-side-up-img.jpg',
-    'title' => 'Sunny Side Up',
-    'subtitle' => 'No place is ever as bad as they tell you it`s going to be.',
-    'author_photo_path' => '/images/william-wong-img.jpg',
-    'author_info' => 'Mat Vogels',
-    'post_date' => '9/25/2015'
-],
-[
-    'background_path' => '/images/water-falls-img.jpg',
-    'title' => 'Water Falls',
-    'subtitle' => 'We travel not to escape life, but for life not to escape us.',
-    'author_photo_path' => '/images/mat-vogels-img.jpg',
-    'author_info' => 'Mat Vogels',
-    'post_date' => '9/25/2015'
-],
-[
-    'background_path' => '/images/throught-the-mist-img.jpg',
-    'title' => 'Through the Mist',
-    'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
-    'author_photo_path' => '/images/william-wong-img.jpg',
-    'author_info' => 'William Wong',
-    'post_date' => '9/25/2015'
-],
-[
-    'background_path' => '/images/awaken-early-img.jpg',
-    'title' => 'Awaken Early',
-    'subtitle' => 'Not all those who wander are lost.',
-    'author_photo_path' => '/images/mat-vogels-img.jpg',
-    'author_info' => 'Mat Vogels',
-    'post_date' => '9/25/2015'
-],
-[
-    'background_path' => '/images/try-it-always-img.jpg',
-    'title' => 'Try it Always',
-    'subtitle' => 'The world is a book, and those who do not travel read only one page.',
-    'author_photo_path' => '/images/mat-vogels-img.jpg',
-    'author_info' => 'Mat Vogels',
-    'post_date' => '9/25/2015'
-],
-];
-
 $featured_posts = [
     [
+        'id' => 1,
         'background_path' => '/images/the-road-ahead-img.jpg',
         'tag_type' => 'none',
         'tag_text' => 'none',
@@ -59,9 +9,10 @@ $featured_posts = [
         'subtitle' => 'The road ahead might be paved - it might not be.',
         'author_photo_path' => '/images/mat-vogels-img.jpg',
         'author_info' => 'Mat Vogels',
-        'post_date' => '9/25/2015'
+        'post_date' => 1443139200
     ],
     [
+        'id' => 2,
         'background_path' => '/images/from-top-down-img.jpg',
         'tag_type' => 'adventure',
         'tag_text' => 'Adventure',
@@ -69,9 +20,66 @@ $featured_posts = [
         'subtitle' => 'Once a year, go someplace you`ve never been before.',
         'author_photo_path' => '/images/william-wong-img.jpg',
         'author_info' => 'William Wong',
-        'post_date' => '9/25/2015'
+        'post_date' => 1443139200
     ],
-]
+];
+
+$posts = [
+[
+    'id' => 3,
+    'background_path' => '/images/still-standing-tall-img.jpg',
+    'title' => 'Still Standing Tall',
+    'subtitle' => 'Life begins at the end of your comfort zone.',
+    'author_photo_path' => '/images/william-wong-img.jpg',
+    'author_info' => 'William Wong',
+    'post_date' => 1443139200
+],
+[
+    'id' => 4,
+    'background_path' => '/images/sunny-side-up-img.jpg',
+    'title' => 'Sunny Side Up',
+    'subtitle' => 'No place is ever as bad as they tell you it`s going to be.',
+    'author_photo_path' => '/images/william-wong-img.jpg',
+    'author_info' => 'Mat Vogels',
+    'post_date' => 1443139200
+],
+[
+    'id' => 5,
+    'background_path' => '/images/water-falls-img.jpg',
+    'title' => 'Water Falls',
+    'subtitle' => 'We travel not to escape life, but for life not to escape us.',
+    'author_photo_path' => '/images/mat-vogels-img.jpg',
+    'author_info' => 'Mat Vogels',
+    'post_date' => 1443139200
+],
+[
+    'id' => 6,
+    'background_path' => '/images/throught-the-mist-img.jpg',
+    'title' => 'Through the Mist',
+    'subtitle' => 'Travel makes you see what a tiny place you occupy in the world.',
+    'author_photo_path' => '/images/william-wong-img.jpg',
+    'author_info' => 'William Wong',
+    'post_date' => 1443139200
+],
+[
+    'id' => 7,
+    'background_path' => '/images/awaken-early-img.jpg',
+    'title' => 'Awaken Early',
+    'subtitle' => 'Not all those who wander are lost.',
+    'author_photo_path' => '/images/mat-vogels-img.jpg',
+    'author_info' => 'Mat Vogels',
+    'post_date' => 1443139200
+],
+[
+    'id' => 8,
+    'background_path' => '/images/try-it-always-img.jpg',
+    'title' => 'Try it Always',
+    'subtitle' => 'The world is a book, and those who do not travel read only one page.',
+    'author_photo_path' => '/images/mat-vogels-img.jpg',
+    'author_info' => 'Mat Vogels',
+    'post_date' => 1443139200
+],
+];
 ?>
 
 <!DOCTYPE html>
@@ -136,7 +144,7 @@ $featured_posts = [
                 </div>
                 <?php 
                     foreach ($posts as $post) {
-                        include 'post_preview.php';
+                        include 'most_recent_post_preview.php';
                     }
                 ?>
             </div>

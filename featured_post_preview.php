@@ -9,6 +9,7 @@
             <img class="author-info__image" src="<?= $featured_post['author_photo_path'] ?>" alt="img">
             <span class="author-info__text"><?= $featured_post['author_info'] ?></span>
         </div>
-        <span class="article-info__date"><?= $featured_post['post_date'] ?></span>
+        <span class="article-info__date"><?= date("m/d/Y", $featured_post['post_date']) ?></span>
     </div>
+    <a class="post_page-link" href='/post.php?id=<?= $featured_post['id'] ?>'><span></span></a>
 </article>
