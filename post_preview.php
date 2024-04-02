@@ -3,11 +3,11 @@
     <br>
     <span class="header-main-bot-text"><?= $post['subtitle'] ?></span>
 </div>
-<img class="image-after-menu" src="<?= $post['image-path'] ?>">
+<img class="image-after-menu" src="<?= $post['image_url'] ?>">
 <div class="main-text-wrapper">
     <div class="main-text">
         <p>
-            <?= $post['main-text'] ?>
+            <?= $post['content'] ?>
         </p>
     </div>
 </div>
