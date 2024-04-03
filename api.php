@@ -30,14 +30,16 @@ $main_img_ext = '';
 saveImage($dataAsArray['image'], $dataAsArray['img_name'], $main_img_ext);
 
 //title, subtitle, author, author_url, publish_date, image_url, featured, content
-$info = "('". $dataAsArray['title'] . "', " .
-        "'". $dataAsArray['subtitle'] . "', " .
-        "'". $dataAsArray['author'] . "', " .
-        "'images/". $dataAsArray['author_img_name'] . '.' . $author_img_ext . "', " .
-        "'" . $publishDate . "', " .
-        "'images/". $dataAsArray['img_name'] . '.' . $main_img_ext . "', " . 
-        $dataAsArray['featured'] . ', ' . 
-        "'". $dataAsArray['content'] . "')";
+$info = [
+    "title" => $dataAsArray['title'],
+    "subtitle" => $dataAsArray['subtitle'],
+    "author" => $dataAsArray['author'],
+    "author_url" => 'images/' . $dataAsArray['author_img_name'] . '.' . $author_img_ext,
+    "publish_date" => $publishDate,
+    "image_url" => 'images/' . $dataAsArray['img_name'] . '.' . $main_img_ext,
+    "featured" => $dataAsArray['featured'],
+    "content" => $dataAsArray["content"]
+];
 
 $conn = createDBConnection();
 postToDataBase($conn, $info);
@@ -89,12 +91,14 @@ function closeDBConnection(mysqli $conn): void
 
 function postToDataBase(mysqli $conn, $info): void
 {
-    $sql = "INSERT INTO post (title, subtitle, author, author_url, publish_date, image_url, featured, content) VALUES " . $info . ";";
-    
+    $sql = "INSERT INTO post (title, subtitle, author, author_url, publish_date, image_url, featured, content) VALUES 
+    ('{$info['title']}', '{$info['subtitle']}', '{$info['author']}', '{$info['author_url']}', '{$info['publish_date']}', 
+    '{$info['image_url']}', {$info['featured']}, '{$info['content']}')";
+
     if ($conn->query($sql) === TRUE) {
-      echo "New record created successfully";
+        echo "New record created successfully";
     } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 ?>
