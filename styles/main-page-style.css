@@ -328,7 +328,7 @@
     width: 100%;
     height: 150px;
     display: flex;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .most-recent__main-text {
