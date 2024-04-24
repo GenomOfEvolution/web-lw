@@ -59,15 +59,17 @@
                     <div class="form__input-box">
                         <label class="form__input-box_label" for="title">Title</label>
                         <input class="form__input-box_input" type="text" name="title" id="title" placeholder=" " value="New Post">
+                        <h3 id="title-error" class="form__input-box_label-bottom-error">Post name is required.</h3>
                     </div>
                     <div class="form__input-box">
                         <label class="form__input-box_label" for="description">Short description</label>
                         <input class="form__input-box_input" type="text" name="description" id="description" placeholder=" " value="Please, enter any description">
+                        <h3 id="description-error" class="form__input-box_label-bottom-error">Post description is required.</h3>
                     </div>
                     <div class="form__input-box">
                         <label class="form__input-box_label" for="author-name">Author Name</label>
                         <input class="form__input-box_input" type="text" name="author-name" id="author-name" placeholder=" ">
-                        <h3 class="form__input-box_label-bottom-error">Author name is required.</h3>
+                        <h3 id="author-name-error" class="form__input-box_label-bottom-error">Author name is required.</h3>
                     </div>
                     <div class="form__input-box">
                         <label class="form__input-box_label" for="author-photo">Author Photo</label>
@@ -88,10 +90,12 @@
                                 </label>
                             </div>
                         </div>
+                        <h3 id="author-photo-error" class="form__input-box_label-bottom-error">Author photo is required.</h3>
                     </div>
                     <div class="form__input-box">
                         <label class="form__input-box_label" for="post-date">Publish Date</label>
                         <input class="form__input-box_input" type="date" name="post-date" id="post-date" placeholder="mm/dd/yyyy">
+                        <h3 id="post-date-error" class="form__input-box_label-bottom-error">Post date is required.</h3>
                     </div>
                     <div class="form__input-box">
                         <label class="form__input-box_label" for="big-image">Hero Image</label>
@@ -115,6 +119,7 @@
                                 Remove
                             </label>
                         </div>
+                        <h3 id="big-image-error" class="form__input-box_label-bottom-error">Article image is required.</h3>
                     </div>
                     <div class="form__input-box">
                         <label class="form__input-box_label" for="small-image">Hero Image</label>
@@ -138,6 +143,7 @@
                                 Remove
                             </label>
                         </div>
+                        <h3 id="small-image-error" class="form__input-box_label-bottom-error">Post card image is required.</h3>
                     </div>
                 </form>
                 <div class="preview">
@@ -181,8 +187,10 @@
 
         <div class="main-information-wrapper">
             <h2 class="header2">Content</h2>
-            <label class="label-text" for="post-content">Post content (plain text)</label>
-            <textarea class="content__textarea" id="post-content" name="post-content" cols="125" rows="6" placeholder="Type anything you want..."></textarea>
+            <form id="content-form">
+                <label class="label-text" for="post-content">Post content (plain text)</label>
+                <textarea class="content__textarea" id="post-content" name="post-content" cols="125" rows="6" placeholder="Type anything you want..."></textarea>
+            </form>
         </div>
 
     </div>

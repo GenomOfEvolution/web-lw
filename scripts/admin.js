@@ -172,9 +172,13 @@ function ValidateForm() {
             isEmpty = true;
             element.classList.remove('form__input-box_input');
             element.classList.add('form__input-box_input-error');
+            let errText = document.getElementById(element.id + '-error');
+            errText.style.display = 'flex';
         }else{
             element.classList.remove('form__input-box_input-error');
-            element.classList.add('form__input-box_input');  
+            element.classList.add('form__input-box_input');
+            let errText = document.getElementById(element.id + '-error');
+            errText.style.display = 'none';
         }
     }
 
@@ -186,12 +190,13 @@ function ValidateForm() {
     } else {
         errBlock.style.display = 'none';
         succBlock.style.display = 'flex';
-        displayFormData();
+        displayFormData('main-form');
+        displayFormData('content-form');
     }
 }
 
-function displayFormData() {
-    const formData = new FormData(document.getElementById('main-form'));
+function displayFormData(form) {
+    const formData = new FormData(document.getElementById(form));
     for (const [key, value] of formData.entries()) {
         if (value instanceof File) {
             readAndDisplayFile(value);
